@@ -1,0 +1,128 @@
+.main_card_car {
+    padding: 10px;
+    background: rgba(28,13,6,0.6) !important;
+    border-radius: 10px;
+}
+
+.car_img img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.car_img {
+    width: 100%;
+    height: 160px;
+    overflow: hidden; /* Ensures the image doesn't overflow */
+    display: flex; /* Helps center the image if needed */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.car_title{
+    margin-bottom: 20px;
+}
+
+.car_title a{
+    color: #fff;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.car_title a:hover{
+    font-size: 1.6rem;
+    color: #ff8047 ;
+}
+
+.creator_infor h6{
+    font-size: 1rem;
+    color: #fff;
+    opacity: 90%;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+.creator_infor p{
+    font-size: 1.1rem;
+    color: #fff ;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.buy_btn , .detail_btn{
+    border: none;
+    outline: none;
+    padding: 5px 22px;
+    background: transparent;
+    border: 1px solid #ff8047 ;
+    font-size: 0.9rem;
+    color: #fff;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+button.detail_btn a{
+    text-decoration: none;
+    color: #fff ;
+}
+
+.buy_btn:hover , .detail_btn:hover{
+    background:#ff8047 ;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.Owner{
+    color: #48e321;
+    
+}
+
+
+@media only screen and (max-width: 992px){
+    .car_title a{
+        font-size: 0.9rem !important ;
+    }
+
+    .creator_infor h6{
+        font-size: 0.6rem !important ;
+    }
+
+    .creator_infor p {
+        font-size: 0.7rem !important ;
+    }
+
+    .buy_btn{
+        padding: 4px 20px !important ;
+        font-size: 0.6em !important ;
+    }
+
+    .detail_btn a {
+        font-size: 0.6rem !important ; 
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    .creator_infor h6{
+        font-size: 0.7rem !important ;
+    }
+
+    .creator_infor p {
+        font-size: 0.75rem !important ;
+    }
+
+}
+
+@media only screen and (max-width: 1398px){
+    .buy_btn{
+        padding: 4px 20px !important ;
+        font-size: 0.6em !important ;
+    }
+
+    .detail_btn  {
+        font-size: 0.6rem !important ; 
+        padding: 4px 20px !important ;
+    }
+}

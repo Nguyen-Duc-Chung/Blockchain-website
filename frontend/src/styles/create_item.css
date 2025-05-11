@@ -1,0 +1,307 @@
+
+.create__item{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h5.prev_item, .create__item h3{
+    color: #f4ebdc ;
+}
+
+form{
+    width: 85%;
+}
+
+.form__input input, .form__input textarea, .form__select input{
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #af9c9c;
+    transition: 0.1s;
+}
+
+.form__input input::placeholder,
+.form__input textarea::placeholder {
+    color: #000000 ;
+}
+
+.form__input{
+    margin-bottom: 15px;
+}
+
+.form__input label,.form__select label{
+    color: #f4ebdc ;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+::-webkit-calendar-picker-indicator{
+    filter: invert(1) ;
+    cursor: pointer;
+}
+
+/* On hover: Light white border */
+/* When the select is hovered, show a 2px solid white border */
+.form__input input:hover,.form__input textarea:hover  {
+    border: 1.5px solid rgba(255, 255, 255, 0.7); /* Slight white border */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Light white glow */
+}
+
+/* On focus: White border and soft white glow */
+.form__input input:focus ,.form__input textarea:focus {
+    border: 2px solid #ffffff !important; /* White border when clicked */
+    background-color: #c5b2b2;
+}
+
+
+/*//////////////// SELECT OPTION  ////////////////////*/
+
+.alert {
+    color: red  !important;
+}
+
+.custom-dropdown  {
+    color: rgb(0, 0, 0) !important;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Change the background color of the select input box */
+.custom-select__control {
+    background-color: #af9c9c !important; 
+    border: none !important; /* Default none border */
+    transition: border-color 0.3s ease-in-out;
+    margin-bottom: 15px;
+}
+
+/* When the select is hovered, show a 2px solid white border */
+.custom-select__control:hover {
+    border: 1.5px solid white !important; 
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); 
+    background-color: #c5b2b2 !important;
+    cursor: pointer;
+}
+
+/* Change the color of the placeholder text */
+.custom-select__placeholder {
+    color: #372a22!important; /* Dark Brown placeholder text , take in App.css*/
+}
+
+/* Change the dropdown menu background */
+.custom-select__menu {
+    background-color: #af9c9c !important; /* Adjust dropdown menu background */
+}
+
+/* Change the option background color */
+.custom-select__option {
+    background-color: #f7f3ef !important; 
+    color: black !important; 
+}
+
+.custom-select__option:hover {
+    background-color: #855f4a !important; 
+    color: #f6f3ee !important; 
+}
+
+/* Change the color of the dropdown arrow */
+.custom-select__indicator {
+    color: rgb(20, 19, 19) !important; 
+}
+
+/* Change the color of the separator bar */
+.custom-select__indicator-separator {
+    background-color: rgb(20, 19, 19) !important; /* Default white separator */
+    width: 2px !important ;
+}
+
+
+/*//////////////// ADD BUTTON ////////////////////*/
+.add-btn {
+    padding: 8px 25px;
+    background: white;
+    margin: auto;
+    width: 85% ;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #493c34  ;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.add-btn i {
+    color: #493c34  ;
+    font-weight: 900;
+}
+
+.add-btn:hover{
+    background: #f3c87b  ;
+}
+
+.add-btn:hover a{
+    color: white;
+}
+
+.add-btn:hover i{
+    color: white;
+}
+/*//////////////////////////////////////*/
+
+@media only screen and (max-width:576px){
+    .create__item{
+        margin-top: 15px;
+    }
+}
+
+/*///////////////////////// Toast NOTIFICATION ///////////////////// */
+
+.success_noti , .error_noti {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    border-radius: 12px;
+    background: #fff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: translateX(calc(100% + 30px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+    
+  }
+
+  .success_noti {
+    border-left: 6px solid #15de44 ;
+    z-index: 1111111111;
+  }
+
+  .error_noti {
+    border-left: 6px solid #de5115;
+    z-index: 111111111;
+  }
+
+  .success_noti.succ-active{
+    transform: translateX(0%);
+  }
+
+  .error_noti.err-active{
+    transform: translateX(0%);
+  }
+
+  .success_noti .succ-content , .error_noti .err-content  {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .succ-content .check-icon , .err-content .warn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+  }
+
+  .succ-content .check-icon {
+    background-color: #15de44 ;
+  }
+
+  .err-content .warn-icon {
+    background-color: #de5115 ;
+  }
+
+  .succ-content .message , .err-content .message {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+  }
+
+  .message .text {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .succ-content .message .text {
+      color: #15de44 ;
+  }
+    
+  .err-content .message .text {
+      color: #de5115 ;
+  }
+    
+  .message .text.text-1 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #333;
+  }
+
+  .success_noti .succ-close , .error_noti .err-close {
+    position: absolute;
+    top:1px;
+    right:5px;
+    cursor: pointer;
+    color: #3a3636;
+    font-size: 20px;
+  }
+
+  .success_noti .succ-progress , .error_noti .err-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #ddd;
+  }
+
+  .success_noti .succ-progress:before ,.error_noti .err-progress:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .success_noti .succ-progress:before {
+    background-color: #15de44 ;
+  }
+
+  .error_noti .err-progress:before {
+    background-color: #de5115 ;
+  }
+
+  .err-progress.err-active:before  {
+    animation: progress 4s linear forwards;
+  }
+
+  .succ-progress.succ-active:before{
+    animation: progress 2s linear forwards;
+
+  }
+
+  @keyframes progress {
+     100%{
+        right: 100%;
+     }
+  }
+
+  
+  
+
+  

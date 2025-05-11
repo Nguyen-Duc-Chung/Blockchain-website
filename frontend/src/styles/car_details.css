@@ -1,0 +1,222 @@
+
+/* ------------ ADD Striped background for Details Section ------------ */
+.Car_Detail_section {
+    width: 100%;
+    padding: 2.5rem;
+    padding-top: 4rem;
+    background-image: repeating-linear-gradient(
+        45deg,
+        #2e241d 0%,        
+        #2e241d 10%,
+        #372a22 10%,
+        #372a22 20%,
+        #4a3b33 20%,
+        #4a3b33 30%,
+        #604c41 30%,
+        #604c41 40%,
+        #6a5749 40%,
+        #6a5749 50%,
+        #7a6451 50%,
+        #7a6451 60%,
+        #8d7460 60%,
+        #8d7460 70%,
+        #a08470 70%,
+        #a08470 80%,
+        #b49481 80%,
+        #b49481 90%,
+        #c5a693 90%,
+        #c5a693 100%
+    );
+}
+
+
+/*/////////////////////////////////////////////////////////*/
+.carDetail_img{
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.carDetail_content {
+    border: 2px solid #f3c87b ;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(0,0,0, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    
+}
+
+/*/////////////////////////////////////////////////////////*/
+.carDetail_content h2{
+    font-size: 2rem;
+    color: hsl(0, 0%, 100%);  
+}
+
+/*/////////////////////////////////////////////////////////*/
+
+.carDetail_spec{
+    color: #fcfcfc ;
+    width: 100%;
+  
+}
+
+.car_info{
+    margin-top: 20px;
+    font-size: 1rem ;
+    font-weight: 100;
+    width: 100%;
+}
+
+.car_info span{
+    font-size: 1.2rem ;
+    font-weight: 500;
+}
+
+/*/////////////////////////////////////////////////////////*/ 
+
+.CarDetail-btn {
+    padding: 8px 25px;
+    background: white;
+    margin: auto;
+    width: 20rem;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CarDetail-btn a {
+    text-decoration: none;
+    color: #493c34  ;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.CarDetail-btn i {
+    color: #493c34  ;
+    font-weight: 900;
+}
+
+.CarDetail-btn:hover{
+    background: #f3c87b  ;
+}
+
+.CarDetail-btn:hover a{
+    color: white;
+}
+
+.CarDetail-btn:hover i{
+    color: white;
+}
+
+
+.not_for_sale{
+    color: red;
+    font-size: 25px;
+    text-align: center;
+}
+
+.noti_div{
+    color: rgb(24, 227, 24);
+}
+
+/* From Uiverse.io by Voxybuns */ 
+.executeBtn {
+    /* Variables */
+    --button_color: #e8e8e8;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius:  0.75em;
+    background: #373e48 ;
+    margin-top: 10px;
+  }
+  
+  .executeBtn .button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid #373e48 ;
+    border-radius:  0.75em;
+    padding: 0.75em 1em;
+    background: #fae6dd ;
+    color: #373e48 ;
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+  }
+  
+  .executeBtn:hover .button_top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+  }
+  
+  .executeBtn:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+  }
+  
+
+
+@media only screen and (max-width: 1200px){
+    .carDetail_spec{
+        color: #fcfcfc ;
+        width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .car_info span{
+        font-size: 1rem ;
+        font-weight: 450;
+    }
+
+    .executeBtn {
+        font-size: 13px;
+    }
+
+}
+
+@media only screen and (max-width: 991px){
+    .carDetail_content h2{
+        font-size: 1.3rem;
+    }
+
+    .carDetail_content p {
+        font-size: 0.8rem;
+        line-height: 28px;
+    }
+
+    .CarDetail-btn{
+        width: 100%;
+    }
+
+    .CarDetail-btn a{
+        font-size: 0.7rem;
+    }
+
+    .car_info{
+        font-size: 0.8rem ;
+        font-weight: 100;
+    }
+
+    .not_for_sale{
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+    .car_info span{
+        font-size: 1rem ;
+        font-weight: 450;
+    }
+
+}
+
+@media only screen and (max-width: 576px){
+    .carDetail_content h2{
+        margin-top: 15px;
+    }
+
+}

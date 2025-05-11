@@ -1,0 +1,107 @@
+.creator-address {
+    color: #aaa;
+    font-size: 1rem;
+  }
+  
+.profile_container h3 span {
+    font-size: 1.2rem;
+    color: #14ff72;
+    margin-left: 10px;
+  }  
+
+.profile-section {
+    margin-top: 30px;
+    padding: 50px 0;
+    color: white;
+  }
+  
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-avatar img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+
+  .profile-user {
+    width: 100%;
+    
+  }
+  
+  .profile-user h2 {
+    margin: 0;
+    font-size: 2rem;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  
+  .profile-user p {
+    margin: 0;
+    color: #aaa;
+  }
+  
+  .profile-stats {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .profile-stats span {
+    margin-right: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .follow-btn {
+    background-color: #14ff72;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .follow-btn:hover {
+    background-color: white;
+    color: black;
+  }
+  
+
+  .profile-user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+  
+
+@media only screen and (max-width: 700px){
+
+  .profile-avatar img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+
+  .profile-user h2 {
+    font-size: 20px;
+  }
+
+  h3.my-Assets , .totalValue{
+    font-size: 17px;
+  }
+
+}

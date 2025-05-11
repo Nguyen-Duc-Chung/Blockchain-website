@@ -1,0 +1,69 @@
+digraph G {
+  graph [   rankdir = "LR", ratio = "auto"
+          , page = "40", ranksep = 3
+          , nodesep = 1.5
+          , bgcolor="#303a56"
+          , pad="0.2"
+        ];
+
+  // Define the nodes for contracts
+  "Asset" [label = "{Asset|+ listPrice: uint256\n\n+ owner: address\n\n+ updateListPrice(uint256): void\n\n+ getListPrice(): uint256\n\n+ countUserAssests(): uint}"
+                    , fontsize=20
+                    , fontcolor="white"
+                    , style=filled
+                    , fillcolor="#b14952"
+                    
+                    
+          ];
+
+  "AssestMarket" [label = "{AssestMarket|+ createToken(uint256): uint\n\n+ createListedToken(uint256, uint256): void\n\n+ getAllAssest(): ListedToken[]\n\n+ executeSale(uint256): void\n\n+ cancelTrade(uint256): void\n\n+ countUserAssests(): uint}"
+                          , fontsize=20
+                          , fontcolor="white"
+                          , style=filled
+                          , fillcolor="#b14952"
+                 ];
+
+  "ERC721URIStorage" [label = "ERC721URIStorage|+ _safeMint(address, uint256): void\n\n+ _transfer(address, address, uint256): void"
+                              , fontsize=20
+                              , fontcolor="white"
+                              , style=filled
+                              , fillcolor="#b14952"
+                              
+                     ];
+
+  // Inheritance relationships with labels
+  "AssestMarket" -> "Asset" [label = "inherits from", style=solid
+                                     , fontsize=25
+                                     , penwidth=2
+                                     , fontcolor="white"
+                                     , color="#0ac4a2"
+                            ];
+  "AssestMarket" -> "ERC721URIStorage" [label = "inherits from", style=solid
+                                                , fontsize=25
+                                                , penwidth=2
+                                                , fontcolor="white"
+                                                , color="#0ac4a2"
+                                       ];
+
+  // Override and Code Reusability
+  "AssestMarket" -> "Asset" [label = "Overrides countUserAssests()"
+                                     , color="#ff8093", style=solid
+                                     , fontsize=20
+                                     , penwidth=2
+                                     , fontcolor="white"
+                            ];
+  "AssestMarket" -> "Asset" [label = "Reuses: listPrice, updateListPrice"
+                                     , color="#eb8546" , style=solid
+                                     , fontsize=20
+                                     , penwidth=2
+                                     , fontcolor="white"
+                            ];
+
+  // Adding details about each contract
+  "Asset" [shape=record];
+  "AssestMarket" [shape=record];
+  "ERC721URIStorage" [shape=record];
+
+  // Additional styling for the layout
+  node [shape=box, style=filled, color=lightgrey];
+}
